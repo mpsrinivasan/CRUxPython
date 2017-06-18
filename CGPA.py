@@ -21,15 +21,14 @@ def dualDegree():
             if(seat_allotted[string[option + 1]] < seat_available[string[option + 1]]):
                 seat_allotted[string[option + 1]] = seat_allotted[string[option + 1]] + 1;
                 if(int(string[0]) < 10):
-                    print "ID no. ", string[0], "  is allotted: ", string[option + 1], " remaining seats: ", seat_available[string[option + 1]] - seat_allotted[string[option + 1]],
+                    print "ID no. ", string[0], "  is allotted: ", string[option + 1], " remaining seats: ", seat_available[string[option + 1]] - seat_allotted[string[option + 1]];
                 else:
-                    print "ID no. ", string[0], " is allotted: ", string[option + 1], " remaining seats: ", seat_available[string[option + 1]] - seat_allotted[string[option + 1]],
+                    print "ID no. ", string[0], " is allotted: ", string[option + 1], " remaining seats: ", seat_available[string[option + 1]] - seat_allotted[string[option + 1]];
                 string[11] = string[option + 1];
                 option = 1;
                 break;
             else:
                 option = option + 1;
-        print string;
         for x in range(0, 12, 1):
             dualAllotPrint.write(str(string[x]) + ',');
         dualAllotPrint.write('\n');
